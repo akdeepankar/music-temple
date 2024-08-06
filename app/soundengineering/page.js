@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Spline from '@splinetool/react-spline';
+import Image from 'next/image';
+
 
 export default function SoundEngineering() {
   const cards = [
@@ -35,7 +37,12 @@ export default function SoundEngineering() {
       <nav className="bg-[#ffffff14] p-4 m-3 rounded-lg w-full max-w-7xl mt-12 flex items-center justify-between">
       <div className="flex items-center space-x-4">
         <Link href="/">
-          <img src="logo.png" alt="Logo" className="h-9 w-auto rounded-lg" />
+        <Image 
+      src="/logo.png" 
+      alt="Logo" 
+      width={64} 
+      height={64} 
+      className="w-full object-cover rounded-lg " />
         </Link>
       </div>
       <ul className="flex flex-wrap justify-center space-x-4">
@@ -65,7 +72,7 @@ export default function SoundEngineering() {
           <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-6">
             <span className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold">Certification Course</span>
           </h2>
-          <img src="/se.jpg" alt="Sound Engineering Course" className="w-full h-70 object-cover rounded-lg mb-4" />
+          <Image src="/se.jpg" alt="Sound Engineering Course" className="w-full h-70 object-cover rounded-lg mb-4" width={100} height={70}  />
           <p className="text-lg md:text-xl lg:text-2xl mb-6 mt-16 text-white">
             Music Temple, in association with IITM Pravartak, is proud to launch a comprehensive Sound Engineering Course starting on August 3, 2024. This certification program is designed to provide a deep understanding of sound engineering through a structured four-module curriculum. The one-year full certification program will cost students ₹ 2.4 lakhs. Special student discounts allowed, check out announcements from time to time. A student can either take up one module for 3 months or take up one full-year program and get the full certification which will be best suited for better career placements in the industry.
           </p>
@@ -74,7 +81,7 @@ export default function SoundEngineering() {
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 text-center w-full max-w-7xl mt-8">
           {cards.slice(0, 4).map((card, index) => (
             <div key={index} className="bg-[#ffffff14] rounded-lg shadow-lg flex flex-col items-start pr-5 pl-5 pt-10 text-white">
-              <img src={card.image} alt={card.title} className="w-20 h-20 rounded-lg self-center " />
+              <Image src={card.image} alt={card.title} className="w-20 h-20 rounded-lg self-center " width={20} height={20}  />
               <div className='mt-auto pt-5'>
               <p className="text-gray-300 text-start">{card.details}</p>
               <h3 className="font-bold text-3xl mb-4 text-blue-200 text-start">{card.title}</h3>

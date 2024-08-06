@@ -3,6 +3,7 @@
 import Spline from '@splinetool/react-spline/next';
 import React from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -96,10 +97,11 @@ const TestimonialSection = () => {
               key={index}
               className="min-w-full sm:min-w-0 bg-[#ffffff13] p-6 shadow-lg rounded-lg flex flex-col items-center m-2"
             >
-              <img
+              <Image
                 src={testimonial.image}
                 alt={`User ${index + 1}`}
                 className="w-24 h-24 rounded-full object-cover mb-4"
+                width={24} height={24}
               />
               <div className="text-center">
                 <p className="text-sm mb-3 text-white font-semibold">"{testimonial.testimonial}"</p>
@@ -170,7 +172,13 @@ export default function Home() {
       <nav className="bg-[#ffffff14] p-4 m-3 rounded-lg w-full max-w-7xl mt-12 flex items-center justify-between">
       <div className="flex items-center space-x-4">
         <Link href="/">
-          <img src="logo.png" alt="Logo" className="h-9 w-auto rounded-lg" />
+          <Image 
+      src="/logo.png" 
+      alt="Logo" 
+      width={64} 
+      height={64} 
+      className="w-full object-cover rounded-lg " 
+    />
         </Link>
       </div>
       <ul className="flex flex-wrap justify-center space-x-4">
@@ -212,15 +220,15 @@ export default function Home() {
         <p className="text-lg md:text-xl lg:text-2xl mb-6 text-white">Your ultimate destination for comprehensive music education and innovation.</p>
         <div className="flex flex-wrap justify-center gap-4">
           <div className="bg-[#ffffff14] text-gray-900 p-4 rounded-lg shadow-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-            <img src="/wave.svg" alt="Card 1" className="w-full h-40 object-cover rounded-lg mb-4" />
+            <Image src="/wave.svg" alt="Card 1" className="w-full h-40 object-cover rounded-lg mb-4" width={20} height={20}/>
             <p className="text-gray-400 text-md font-semibold">At Music Temple, we blend tradition with technology to offer an unparalleled learning experience in Indian classical music, film music, and folk music.</p>
           </div>
           <div className="bg-[#ffffff14] text-gray-900 p-4 rounded-lg shadow-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-            <img src="/course.svg" alt="Card 2" className="w-full h-40 object-cover rounded-lg mb-4" />
+            <Image src="/course.svg" alt="Card 2" className="w-full h-40 object-cover rounded-lg mb-4" width={20} height={20} />
             <p className="text-gray-400 text-md font-semibold">Explore our courses, discover our revolutionary Gamaka Box Notation System (GBNS), the only patented music notation system for Indian Music.</p>
           </div>
           <div className="bg-[#ffffff14] text-gray-900 p-4 rounded-lg shadow-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-            <img src="/dj.svg" alt="Card 3" className="w-full h-40 object-cover rounded-lg mb-4" />
+            <Image src="/dj.svg" alt="Card 3" className="w-full h-40 object-cover rounded-lg mb-4" width={20} height={20} />
             <p className="text-gray-400 text-md font-semibold">Join us in transforming the way music is learned and appreciated.</p>
           </div>
         </div>
@@ -232,9 +240,9 @@ export default function Home() {
           <span className="text-yellow-700 font-bold">GBNS</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 justify-center py-4">
-          <img src="/mt1.png" alt="Card 1" className="w-full h-full object-cover rounded-lg" />
-          <img src="/mt2.png" alt="Card 2" className="w-full h-full object-cover rounded-lg" />
-          <img src="/mt3.png" alt="Card 3" className="w-full h-full object-cover rounded-lg col-span-2" />
+          <Image src="/mt1.png" alt="Card 1" className="w-full h-full object-cover rounded-lg" width={20} height={20}/>
+          <Image src="/mt2.png" alt="Card 2" className="w-full h-full object-cover rounded-lg" width={20} height={20} />
+          <Image src="/mt3.png" alt="Card 3" className="w-full h-full object-cover rounded-lg col-span-2" width={20} height={20} />
         </div>
       </section>
     </div>
@@ -242,8 +250,13 @@ export default function Home() {
       <YouTubeSection />
       <TestimonialSection />
         <div className='text-center w-full max-w-5xl mx-auto rounded-2xl mt-10 pr-10 pl-10'>
-        <img src="/notation.png" alt="Card 1" className="w-full object-cover rounded-lg mb-4" />
-        <h2 className="text-lg md:text-xl lg:text-xl font-medium mb-10 mt-8">
+        <Image 
+      src="/notation.png" 
+      alt="Card 1" 
+      width={500} 
+      height={300} 
+      className="w-full object-cover rounded-lg mb-4" 
+    />        <h2 className="text-lg md:text-xl lg:text-xl font-medium mb-10 mt-8">
           <span className="text-white">WITH </span>
           <span className="text-yellow-500">GBNS</span>
           <span className="text-white">, WE ARE TAKING INDIAN MUSIC TO EVERYONE!</span>

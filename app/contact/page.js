@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Spline from '@splinetool/react-spline';
+import Image from 'next/image';
+
 
 export default function Contact() {
 
@@ -12,7 +14,12 @@ export default function Contact() {
       <nav className="bg-[#ffffff14] p-4 m-3 rounded-lg w-full max-w-7xl mt-12 flex items-center justify-between">
       <div className="flex items-center space-x-4">
         <Link href="/">
-          <img src="logo.png" alt="Logo" className="h-9 w-auto rounded-lg" />
+        <Image 
+      src="/logo.png" 
+      alt="Logo" 
+      width={64} 
+      height={64} 
+      className="w-full object-cover rounded-lg "  />
         </Link>
       </div>
       <ul className="flex flex-wrap justify-center space-x-4">

@@ -1,4 +1,3 @@
-
 'use client';
 import Spline from '@splinetool/react-spline/next';
 import React from 'react';
@@ -34,7 +33,7 @@ const testimonials = [
   },
   {
     image: "/TM4.jpg",
-    testimonial: "Gamaka Box is a breakthrough in the system of notation and is a great boon to the students of South Indian Classical Music!”",
+    testimonial: "Gamaka Box is a breakthrough in the system of notation and is a great boon to the students of South Indian Classical Music!",
     name: "V. S. Narasimhan",
     company: "Founder, Madras String Quartet"
   },
@@ -87,7 +86,7 @@ const TestimonialSection = () => {
     <div className="bg-[#050d1c] w-full py-8">
       <section className="text-center w-full max-w-6xl mx-auto">
         <h2 className="text-lg md:text-xl lg:text-3xl font-medium mb-12">
-          <span className="text-white">Indian & Western Musicians on </span>
+          <span className="text-white">Indian &amp; Western Musicians on </span>
           <span className="text-yellow-500">Gamaka Box Notation System (GBNS)</span>
         </h2>
         <div className="overflow-x-auto lg:overflow-hidden ">
@@ -104,7 +103,7 @@ const TestimonialSection = () => {
                 width={24} height={24}
               />
               <div className="text-center">
-                <p className="text-sm mb-3 text-white font-semibold">"{testimonial.testimonial}"</p>
+                <p className="text-sm mb-3 text-white font-semibold">&quot;{testimonial.testimonial}&quot;</p>
                 <p className="font-semibold text-base text-white">{testimonial.name}</p>
                 <p className="text-xs text-white">{testimonial.company}</p>
               </div>
@@ -116,11 +115,6 @@ const TestimonialSection = () => {
     </div>
   );
 };
-
-
-
-
-
 
 const YouTubeSection = () => {
   return (
@@ -148,7 +142,6 @@ const YouTubeSection = () => {
     </section></div>
   );
 };
-
 
 export default function Home() {
   return (
@@ -199,7 +192,6 @@ export default function Home() {
         </li>
       </ul>
     </nav>
-
 
       <main className="w-full max-w-7xl">
       <Spline

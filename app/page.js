@@ -3,12 +3,9 @@ import Spline from '@splinetool/react-spline/next';
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, Navigation, Autoplay } from 'swiper';
-import { Container } from 'postcss';
 import Link from 'next/link';
 
 
@@ -69,6 +66,7 @@ const testimonials = [
   }
 ];
 
+
 const videoData = [
   { src: "https://www.youtube.com/embed/FHUZtoG2ZmM", title: "Vaathapi Ganapathim – Maerz Musik Festival (March Music Festival)" },
   { src: "https://www.youtube.com/embed/Vr8gQ8Bl__k", title: "Gamaka Box Effect!- South Indian Todi Raga in – North Indian Sarod – Abhishek Borkar" },
@@ -77,6 +75,8 @@ const videoData = [
   { src: "https://www.youtube.com/embed/h5wQMFDCsVU", title: "Gamaka Box Effect- English Violinist Alice Baron Plays Todi Gamakas off the paper!" },
   { src: "https://www.youtube.com/embed/MhS2nr1Hwl4", title: "Gamaka Box Effect! – Shanakarabharanam Varnam – Sight Reading by Guitarist Matt Bacon" }
 ];
+
+
 
 
 const TestimonialSection = () => {
@@ -100,7 +100,7 @@ const TestimonialSection = () => {
                 src={testimonial.image}
                 alt={`User ${index + 1}`}
                 className="w-24 h-24 rounded-full object-cover mb-4"
-                width={24} height={24}
+                width={1000} height={1000}
               />
               <div className="text-center">
                 <p className="text-sm mb-3 text-white font-semibold">&quot;{testimonial.testimonial}&quot;</p>
@@ -149,30 +149,25 @@ export default function Home() {
       <Head>
         <title>Music Temple</title>
       </Head>
-
       <div className='fixed'>
-
-
       </div>
-
-
-      <div className="fixed top-0 left-0 right-0 bg-[#030811] text-green-300 text-center py-2 z-50">
-        <Link href="/soundengineering" className="block w-full">
-          Launching Sound Engineering One-year Certification Program by IITM Pravartak starting from August 3, 2024!
-        </Link>
+      <div className="fixed top-0 left-0 right-0 bg-[#060d1c] text-green-300  text-center py-2 z-50">
+      <Link href="/soundengineering" className="block w-full">
+        Launching Sound Engineering One-year Certification Program by IITM Pravartak starting from August 3, 2024!
+      </Link>
       </div>
 
       <nav className="bg-[#ffffff14] p-4 m-3 rounded-lg w-full max-w-7xl mt-12 flex items-center justify-between">
       <div className="flex items-center space-x-4">
-        <Link href="/">
-          <Image 
-      src="/logo.png" 
-      alt="Logo" 
-      width={64} 
-      height={64} 
-      className="w-full object-cover rounded-lg " 
-    />
-        </Link>
+      <Link href="/">
+      <Image 
+        src="/logo.png" 
+        alt="Logo" 
+        width={64} 
+        height={64} 
+        className="w-full object-cover rounded-lg " 
+      />
+      </Link>
       </div>
       <ul className="flex flex-wrap justify-center space-x-4">
         <li>
@@ -232,9 +227,9 @@ export default function Home() {
           <span className="text-yellow-700 font-bold">GBNS</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 justify-center py-4">
-          <Image src="/mt1.png" alt="Card 1" className="w-full h-full object-cover rounded-lg" width={20} height={20}/>
-          <Image src="/mt2.png" alt="Card 2" className="w-full h-full object-cover rounded-lg" width={20} height={20} />
-          <Image src="/mt3.png" alt="Card 3" className="w-full h-full object-cover rounded-lg col-span-2" width={20} height={20} />
+          <Image src="/mt1.png" alt="Card 1" className="w-full h-full object-cover rounded-lg" width={1000} height={1000}/>
+          <Image src="/mt2.png" alt="Card 2" className="w-full h-full object-cover rounded-lg" width={1000} height={1000} />
+          <Image src="/mt3.png" alt="Card 3" className="w-full h-full object-cover rounded-lg col-span-2" width={1000} height={1000} />
         </div>
       </section>
     </div>
@@ -245,8 +240,8 @@ export default function Home() {
         <Image 
       src="/notation.png" 
       alt="Card 1" 
-      width={500} 
-      height={300} 
+      width={1000} 
+      height={1000} 
       className="w-full object-cover rounded-lg mb-4" 
     />        <h2 className="text-lg md:text-xl lg:text-xl font-medium mb-10 mt-8">
           <span className="text-white">WITH </span>
@@ -254,7 +249,11 @@ export default function Home() {
           <span className="text-white">, WE ARE TAKING INDIAN MUSIC TO EVERYONE!</span>
         </h2>
         <h2 className="text-lg md:text-xl lg:text-3xl text-white font-medium mb-10">
-          Be part of the music revolution with our GBNS, which is going to transform the lives of many people!
+          <span>Be part of the </span>
+          <span className='italic text-pink-300'>music revolution </span>
+          <span>with our </span>
+          <span>GBNS,</span>
+          <span>which is going to transform the lives of many people!</span>
         </h2>
         <h2 className="text-lg md:text-xl lg:text-xl text-white font-medium mb-10">
           Discover your musical potential through our cutting-edge courses and tools. Whether you’re diving into Indian classical music using our patented Gamaka Box Notation System or honing your skills in sound engineering, we’ve got you covered. Begin your musical journey with us today!
